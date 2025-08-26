@@ -27,12 +27,9 @@ function App() {
         <button onClick={() => setCount(0)}>
           Reset
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Archivo modificado por Santiago Gamborino
       </p>
     </>
   )
