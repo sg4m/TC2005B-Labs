@@ -1,0 +1,188 @@
+:root {
+  --ruler: 16px;
+  --color-red: #AE1100;
+  --color-bg: #EBECF0;
+  --color-shadow: #BABECC;
+  --color-white: #FFF;
+}
+
+body, html {
+  background-color: var(--color-bg);
+}
+
+body, p, input, select, textarea, button {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.2px;
+  font-size: var(--ruler);
+}
+
+div, p {
+  color: var(--color-shadow);
+  text-shadow: 1px 1px 1px var(--color-white);
+}
+
+.neumorph-form {
+  padding: var(--ruler);
+  width: calc(var(--ruler) * 20);
+  margin: 40px auto;
+  background: var(--color-bg);
+  border-radius: 24px;
+  box-shadow: 0 2px 16px rgba(186,190,204,0.08);
+}
+
+.segment {
+  padding: calc(var(--ruler) * 2) 0;
+  text-align: center;
+}
+
+button, input {
+  border: 0;
+  outline: 0;
+  font-size: var(--ruler);
+  border-radius: calc(var(--ruler) * 20);
+  padding: var(--ruler);
+  background-color: var(--color-bg);
+  text-shadow: 1px 1px 0 var(--color-white);
+}
+
+label {
+  display: block;
+  margin-bottom: calc(var(--ruler) * 1.5);
+  width: 100%;
+}
+
+input {
+  color: #222; /* Dark gray for better clarity */
+  margin-right: calc(var(--ruler) / 2);
+  box-shadow:  inset 2px 2px 5px var(--color-shadow), inset -5px -5px 10px var(--color-white);
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+input:focus {
+  box-shadow:  inset 1px 1px 2px var(--color-shadow), inset -1px -1px 2px var(--color-white);
+}
+
+button {
+  color: #61677C;
+  font-weight: bold;
+  box-shadow: -5px -5px 20px var(--color-white),  5px 5px 20px var(--color-shadow);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  box-shadow: -2px -2px 5px var(--color-white), 2px 2px 5px var(--color-shadow);
+}
+
+button:active {
+  box-shadow: inset 1px 1px 2px var(--color-shadow), inset -1px -1px 2px var(--color-white);
+}
+
+button.red {
+  display: block;
+  width: 100%;
+  color: var(--color-red);
+  box-shadow:
+    -5px -5px 20px var(--color-white),
+    5px 5px 20px #f7b2b2,
+    0 0 8px 2px #ffb3b3;
+}
+
+button.red:hover {
+  box-shadow:
+    -2px -2px 8px var(--color-white),
+    2px 2px 12px #ffb3b3,
+    0 0 12px 4px #ffb3b3;
+  background: #fff0f0;
+  color: #d32f2f;
+  transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+}
+
+.simple-form-container {
+  background: #fff;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+.simple-form-container h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.simple-form-container .form-group {
+  margin-bottom: 18px;
+}
+
+.simple-form-container .form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #555;
+  font-weight: 500;
+}
+
+.simple-form-container .form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #bdbdbd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+.simple-form-container .form-group input:focus {
+  border-color: #1976d2;
+  outline: none;
+}
+
+.simple-form-container button {
+  width: 100%;
+  padding: 10px 0;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.simple-form-container button:hover {
+  background: #1565c0;
+}
+
+.alert-success {
+  margin-top: 24px;
+  padding: 24px 16px;
+  background: var(--color-bg);
+  border-radius: 24px;
+  /* Add a greenish shadow to the neumorphic effect */
+  box-shadow:
+    -5px -5px 20px var(--color-white),
+    5px 5px 20px #b2f2c9,
+    0 0 8px 2px #a5d6a7;
+  color: #1b5e20; /* Darker green for clarity */
+  text-shadow: 1px 1px 0 #e0f2f1;
+  border: none;
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.form-row label {
+  flex: 1;
+  margin-bottom: 0;
+}
