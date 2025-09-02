@@ -1,27 +1,33 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react";
+
 
 export const useFetch = (url) => {
-  const [data, setData] = useState(null)
-  const [isLoading, setIsLoading] = useState(true)
-  const [hasError, setHasError] = useState(false)
+    const [state, setState] = useState({
+        data: null,
+        isLoading: true,
+        hasError: null
+    })
 
-  useEffect(() => {
-    setIsLoading(true)
-    setHasError(false)
-    fetch(url)
-      .then((res) => {
-        if (!res.ok) throw new Error('Network response was not ok')
-        return res.json()
-      })
-      .then((data) => {
-        setData(data)
-        setIsLoading(false)
-      })
-      .catch(() => {
-        setHasError(true)
-        setIsLoading(false)
-      })
-  }, [url])
+    const getFetch = async() => {
+        setState({...state, isLoading: true, });
+        const response = await fetch(url);
+        const data = await response.json();
+        setState({
+            data,
+            isLoading: false,
+            hasError: null,
+        });
+    }
 
-  return { data, isLoading, hasError }
+    useEffect(() => {
+        getFetch();
+    }, [url])
+
+    return {
+        data: state.data,
+        isLoading: state.isLoading,
+        hasError: state.hasError
+        };
+
+
 }
