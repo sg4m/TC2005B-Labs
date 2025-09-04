@@ -19,10 +19,9 @@ function App() {
     <Layout />
       <Routes>
         <Route path="/" element={ <Layout/> }></Route>
+          <Route path="Inicio" element={ <Inicio/>}></Route>
           <Route path="Perfil" element={ <Perfil/>}></Route>
           <Route path="Login" element={ <Login/> }></Route>
-          <Route path="Inicio" element={ <Inicio/>}></Route>
-          <Route path="*" element={ <Inicio/>}></Route>
       </Routes>    
     </div>
   );
