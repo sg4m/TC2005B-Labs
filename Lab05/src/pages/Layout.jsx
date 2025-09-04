@@ -13,7 +13,7 @@ export const Layout = ({ isAuthenticated, setIsAuthenticated }) => {
     return (
         <div>
             <header>
-                <h2>Simple React App</h2>
+                <h2>Routes</h2>
             </header>
             <nav>
                 <ul style={{ display: 'flex', gap: '1rem', listStyle: 'none', padding: 0 }}>
