@@ -5,7 +5,7 @@ export const Layout = () => {
   return <div>
     <nav>
         <ul>
-            <li><NavLink to="/">Inicio</NavLink></li>
+            <li><NavLink to="/Inicio">Inicio</NavLink></li>
             <li><NavLink to="/Login">Login</NavLink></li>
             <li><NavLink to="/Perfil">Perfil</NavLink></li>
         </ul>
