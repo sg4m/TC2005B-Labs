@@ -13,7 +13,7 @@ const data = [
     {id: 7, nombre: "Carlos Sainz", empresa: "Williams Racing"},
 ];
 
-class App extends React.Component {
+class Usuarios extends React.Component {
     state = {
         data: data,
         modalActualizar: false,
@@ -213,8 +213,8 @@ class App extends React.Component {
         </ModalFooter>
         </Modal>
         </>
-        );
+        )
     }
 }
 
-export { App as Usuarios }
+export default Usuarios; 
