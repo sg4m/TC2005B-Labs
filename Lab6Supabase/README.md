@@ -14,3 +14,20 @@ The React Compiler is not enabled on this template. To add it, see [this documen
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Supabase CRUD (usuario table)
+
+This project includes a tiny CRUD UI wired to a Supabase table named `usuario`.
+
+Setup
+- Create a file named `.env` in the project root with these variables (Vite uses VITE_ prefix):
+
+  VITE_SUPABASE_URL=https://your-project.supabase.co
+  VITE_SUPABASE_ANON_KEY=your-anon-key
+
+- Install deps: `npm install` (already done)
+- Run dev server: `npm run dev`
+
+Notes
+- The Supabase client is in `src/supabaseClient.js`.
+- The CRUD UI is `src/App.jsx` and operates on the `usuario` table. Ensure the table columns match the code: `id_usuario`, `correo`, `usuario`, `contrasenia`, `pais_region`, `fecha_registro`.
